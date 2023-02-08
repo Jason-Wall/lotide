@@ -1,7 +1,7 @@
 const flatten = function(arr){
 let returnArr = [];
 for (let step of arr){
-  typeof step.isArray ? returnArr.push(...step): returnArr.push(step);
+  typeof Array.isArray(step) ? returnArr.push(...step): returnArr.push(step);
   }
   console.log('returnArr', returnArr);
 };
