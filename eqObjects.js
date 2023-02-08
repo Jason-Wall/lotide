@@ -17,7 +17,6 @@ const eqArrays = function (arrA, arrB) {
 
 
 const eqObjects = function (object1, object2) {
-  //compare keys for both objects
   const obj1KeyArr = Object.keys(object1).sort();
   const obj2KeyArr = Object.keys(object2).sort();
   if (eqArrays(obj1KeyArr, obj2KeyArr)) {
@@ -29,8 +28,6 @@ const eqObjects = function (object1, object2) {
     return true
   }
   return false;
-  // console.log('keys1',Object.keys(object1).sort());
-  // console.log('keys2',Object.keys(object2).sort());
 };
 
 
