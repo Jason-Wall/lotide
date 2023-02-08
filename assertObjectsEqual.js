@@ -1,3 +1,12 @@
+const assertObjectsEqual = function (object1, object2) {
+  const inspect = require('util').inspect;
+  if (eqObjects(object1, object2)) {
+    console.log(`✅: ${inspect(object1)} === ${inspect(object2)}`);
+  } else {
+    console.log(`🔴: ${inspect(object1)} !== ${inspect(object2)}`);
+  }
+};
+
 const eqArrays = function (arrA, arrB) {
   if (arrA.length !== arrB.length) { return false };
   for (let i = 0; i < arrA.length; i++) {
@@ -25,7 +34,7 @@ const eqObjects = function (object1, object2) {
 
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { color: "red", size: "medium" };
-console.log(eqObjects(shirtObject, anotherShirtObject)); // => true
+assertObjectsEqual(shirtObject, anotherShirtObject);
 
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-console.log(eqObjects(shirtObject, longSleeveShirtObject)); // => false
+const longSleeveShirtObject= { size: "medium", color: "red", sleeveLength: "long" };
+assertObjectsEqual(shirtObject,longSleeveShirtObject);
