@@ -1,5 +1,5 @@
 // TESTING FUNCTIONS ////////////////////////////
-const assertArraysEqual = function (arrA, arrB) {
+const assertArraysEqual = function(arrA, arrB) {
   const arrEq = eqArrays(arrA, arrB);
   if (arrEq) {
     console.log(`✅: [${arrA}] === [${arrB}]`);
@@ -8,25 +8,31 @@ const assertArraysEqual = function (arrA, arrB) {
   }
 };
 
-const eqArrays = function (arrA, arrB) {
-  if (arrA.length !== arrB.length) { return false };
+const eqArrays = function(arrA, arrB) {
+  if (arrA.length !== arrB.length) {
+    return false;
+  }
   for (let i = 0; i < arrA.length; i++) {
-    if (arrA[i] !== arrB[i]) { return false };
+    if (arrA[i] !== arrB[i]) {
+      return false;
+    }
   }
   return true;
-}
+};
 
 
 
 // MAIN ////////////////////////////////////////
 const takeUntil = (arr, callback) => {
   const outputArr = [];
-  for (element of arr) {
-    if (callback(element)) { return outputArr };
+  for (const element of arr) {
+    if (callback(element)) {
+      return outputArr;
+    }
     outputArr.push(element);
   }
   return outputArr;
-}
+};
 
 
 
