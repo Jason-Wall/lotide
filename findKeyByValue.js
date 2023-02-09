@@ -1,5 +1,5 @@
 // TEST FUNCTIONS
-const assertEqual = function(actual, expected) {
+const assertEqual = function (actual, expected) {
   if (actual === expected) {
     console.log(`✅: ${actual} === ${expected}`);
   } else {
@@ -8,9 +8,9 @@ const assertEqual = function(actual, expected) {
 };
 
 // MAIN FUNCTIONS
-const findKeyByValue = function(keyList, val) {
-  for (const key in keyList) {
-    if (keyList[key] === val) {
+const findKeyByValue = function (obj, val) {
+  for (const key in obj) {
+    if (obj[key] === val) {
       return key;
     }
   }
