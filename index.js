@@ -9,12 +9,12 @@ const countOnly = require('./countOnly');
 
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  countLetters:countLetters,
-  letterPositions:letterPositions,
-  map:map,
-  takeUntil:takeUntil,
-  countOnly:countOnly
+  head,
+  tail,
+  middle,
+  countLetters,
+  letterPositions,
+  map,
+  takeUntil,
+  countOnly
 };
