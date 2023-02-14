@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@jason-wall/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A student Lodash clone - for learning purposes only",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Jason-Wall/lotide.git"
   },
-  "author": "",
+  "author": "Jason Waldick",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Jason-Wall/lotide/issues"

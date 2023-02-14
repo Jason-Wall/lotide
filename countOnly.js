@@ -1,3 +1,4 @@
+// Returns an object of items: counts from an array based on an approval object.
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 

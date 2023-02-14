@@ -1,3 +1,4 @@
+// Returns a modified array based on the instructions of a user callback function
 const map = (arr, func) => {
   const resultArr = [];
   for (let element of arr) {
@@ -7,8 +8,4 @@ const map = (arr, func) => {
   return resultArr;
 };
 
-
-
-const words = ["ground", "control", "to", "major", "tom"];
-const myfunc = (argString) => argString.toUpperCase();
-console.log(map(words, myfunc));
+module.exports = map;

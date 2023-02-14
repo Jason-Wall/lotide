@@ -1,13 +1,17 @@
-const eqArrays = function (arrA, arrB) {
-  if (arrA.length !== arrB.length) { return false };
+const eqArrays = function(arrA, arrB) {
+  if (arrA.length !== arrB.length) {
+    return false;
+  }
   for (let i = 0; i < arrA.length; i++) {
-    if (arrA[i] !== arrB[i]) { return false };
+    if (arrA[i] !== arrB[i]) {
+      return false;
+    }
   }
   return true;
-}
+};
 
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   const obj1KeyArr = Object.keys(object1).sort();
   const obj2KeyArr = Object.keys(object2).sort();
   if (eqArrays(obj1KeyArr, obj2KeyArr)) {
@@ -16,7 +20,7 @@ const eqObjects = function (object1, object2) {
         return false;
       }
     }
-    return true
+    return true;
   }
   return false;
 };

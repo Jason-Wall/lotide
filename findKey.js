@@ -1,5 +1,5 @@
 // TESTING FUNCTIONS ///////////////
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅: ${actual} === ${expected}`);
   } else {

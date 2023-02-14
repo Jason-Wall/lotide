@@ -1,4 +1,4 @@
-
+// Returns an object containing a sum of each letter in a string.
 const countLetters = function(str) {
   const results = {};
   for (const letter of str) {

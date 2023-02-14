@@ -1,48 +1,16 @@
-// TESTING FUNCTIONS ////////////////////////////
-const assertArraysEqual = function(arrA, arrB) {
-  const arrEq = eqArrays(arrA, arrB);
-  if (arrEq) {
-    console.log(`✅: [${arrA}] === [${arrB}]`);
-  } else {
-    console.log(`🔴: [${arrA}] !== [${arrB}]`);
-  }
-};
-
-const eqArrays = function(arrA, arrB) {
-  if (arrA.length !== arrB.length) {
-    return false;
-  }
-  for (let i = 0; i < arrA.length; i++) {
-    if (arrA[i] !== arrB[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-
-// MAIN ////////////////////////////////////////
+// Push elements to a new array until callback function is satisfied (true)
 const takeUntil = (arr, callback) => {
-  const outputArr = [];
+  const results = [];
+
   for (const element of arr) {
+    
     if (callback(element)) {
-      return outputArr;
+      return results;
     }
-    outputArr.push(element);
+    results.push(element);
   }
-  return outputArr;
+  
+  return results;
 };
 
-
-
-// TEST CASES /////////////////////////////////
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const results1 = takeUntil(data1, x => x < 0);
-assertArraysEqual(results1, [1, 2, 5, 7, 2]);
-
-console.log('---');
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
+module.exports = takeUntil;
